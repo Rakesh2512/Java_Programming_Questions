@@ -8,6 +8,7 @@ public class Queue {
 	int front;
 	int rear;
 	
+	// Constructor
 	Queue(int size){
 		this.capacity = size;
 		a = new int[capacity];
@@ -15,11 +16,14 @@ public class Queue {
 		rear = -1;
 	}
 	
+	// To check the Queue is Empty or not
 	public boolean isEmpty() {
-		//System.out.println("Queue is Empty");
+		
 		return rear == -1;
 	}
 	
+	
+	//Function to add value in queue
 	public void add(int value) {
 		if(rear == capacity-1) {
 			System.out.println("Queue is full");
@@ -30,6 +34,7 @@ public class Queue {
 		a[rear] = value;
 	}
 	
+	// function to print all data of queue
 	public void print() {
 		
 		for(int k = front;k<=rear;k++) {
@@ -38,6 +43,7 @@ public class Queue {
 		System.out.println("\n");
 	}
 	
+	//function to remove the data from queue
 	public void remove() {
 		if(front > rear) {
 			System.out.println("Queue is Empty");
@@ -52,6 +58,8 @@ public class Queue {
 		}
 		System.out.println("\n");
 	}
+	
+	// to get front data
 	public int front() {
 		if(front > rear) {
 			System.out.println("Queue is Empty");
@@ -61,6 +69,8 @@ public class Queue {
 			return a[front];
 		}
 	}
+	
+	
 	public static void main(String[] args) {
 		Queue q = new Queue(4);
 		System.out.println(q.isEmpty());
@@ -74,6 +84,7 @@ public class Queue {
 		q.print();
 		q.remove();
 		q.print();
+		
 		System.out.println(q.front());
 	}
 
