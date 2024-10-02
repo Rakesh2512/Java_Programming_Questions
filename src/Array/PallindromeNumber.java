@@ -10,8 +10,14 @@ public class PallindromeNumber {
 			ans = ans*10+rem;
 			number/=10;
 		}
-		return ans == num;
+		if(ans == number) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
+	
 	public static void main(String[] args) {
 		int digit = 131;
 		int num = digit;
